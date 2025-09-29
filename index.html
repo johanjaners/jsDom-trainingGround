@@ -3,7 +3,10 @@
 <head>
     <title>JavaScript training ground</title>
     <script>
-        console.log("salt> We are writing to the console");
+        function getCompanyName() {
+            return "SALT";
+        }
+        console.log(`salt> In the head. Company name is ${name}`);
     </script>
     <style>
         body{
@@ -22,7 +25,8 @@
         <div>Content 3</div>
     </main>
     <script>
-        console.log("salt> End of body");
+         name = getCompanyName();
+        console.log(`salt> End of body. Company name is ${name}`);
     </script>
 </body>
 </html>
