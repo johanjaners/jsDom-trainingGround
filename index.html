@@ -18,13 +18,14 @@
         console.log("salt> Start of body");
     </script>
     <main>
-        <div>Content 1</div>
+        <div id="test1">Content 1</div>
         <div id="companyName">Content 2</div>
         <div>Content 3</div>
     </main>
     <script>
         const companyName = myFunctions.getCompanyName();
         document.getElementById("companyName").innerHTML = companyName;
+        document.getElementById("test1").innerHTML = "test1";
     </script>
 </body>
 </html>
