@@ -1,4 +1,6 @@
-function getCompanyName() {
-            return "SALT";
-        }
+myFunctions = {
+    getCompanyName() {
+        return "SALT";
+    },
+},
 console.log("salt> Functions loaded");
