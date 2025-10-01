@@ -35,6 +35,11 @@
         const companyNameElement = document.querySelector("#companyName");
         companyNameElement.innerHTML =
             companyName + " set using a query selector by id";
+
+        const boldNodesQuerySelected = document.querySelectorAll(".bold");
+        for (let i = 0; i < boldNodes.length; i++) {
+            boldNodes[i].innerHTML += "... and bold selector with query";
+        }
     </script>
 </body>
 </html>
