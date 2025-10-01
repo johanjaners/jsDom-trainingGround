@@ -31,6 +31,10 @@
         for (let i = 0; i < boldNodes.length; i++){
             boldNodes[i].innerHTML += " ... and bold";
         }
+
+        const companyNameElement = document.querySelector("#companyName");
+        companyNameElement.innerHTML =
+            companyName + " set using a query selector by id";
     </script>
 </body>
 </html>
