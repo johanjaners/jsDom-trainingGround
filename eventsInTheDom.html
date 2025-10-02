@@ -57,10 +57,12 @@
         //     console.log("Document is loaded, y'all");
         // });
 
-        function aFunctionToRunLater() {
+        // function aFunctionToRunLater() {
+        //     console.log("Document is loaded, y'all");
+        // }
+        document.addEventListener("DOMContentLoaded", () => {
             console.log("Document is loaded, y'all");
-        }
-        document.addEventListener("DOMContentLoaded", aFunctionToRunLater);
+        });
     </script>
 </body>
 </html>
