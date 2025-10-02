@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Changing CSS with JS</title>
-    <script src="functions.js"></script>
     <style>
         .mainResult {
             font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -43,7 +42,7 @@
         }
 
         function addResultStyling() {
-            const mainResultElements = document.querySelectorAll("mainResult");
+            const mainResultElements = document.querySelectorAll(".mainResult");
 
             for(let i = 0; i < mainResultElements.length; i++) {
                 const content = mainResultElements[i].textContent;
@@ -51,6 +50,8 @@
                 addStyleBasedOfContent(mainResultElements[i], content);
             }
         }
+
+        addResultStyling();
     </script>
 </body>
 </html>
