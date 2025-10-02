@@ -28,7 +28,18 @@
         <h1 class="mainResult">A name - not a number</h1>
     </main>
     <script>
+        function addStyleBasedOfContent(element, content) {
+            const convertedNumber = Number(content);
 
+            if (Number.isNaN(convertedNumber)) {
+                return;
+            }
+            if (convertedNumber < 0) {
+                element.classList.add("negativeResult");
+                return;
+            }
+            element.classList.add("positiveResult");
+        }
     </script>
 </body>
 </html>
