@@ -19,10 +19,10 @@ function addListInMain(numberOfListItems) {
 }
 
 function removeDivById(id) {
-    const dicToRemove = document.querySelector("div#" + id);
+    const divToRemove = document.querySelector("div#" + id);
 
     if (divToRemove != undefined) {
-        divToRemove.remove;
+        divToRemove.remove();
     }
 }
 
