@@ -18,4 +18,13 @@ function addListInMain(numberOfListItems) {
     main.appendChild(ulElement);
 }
 
+function removeDivById(id) {
+    const dicToRemove = document.querySelector("div#" + id);
+
+    if (divToRemove != undefined) {
+        divToRemove.remove;
+    }
+}
+
+
 console.log("salt> Functions loaded");
