@@ -21,6 +21,17 @@
         }
     </style>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("Document is loaded, y'all");
+            
+            addResultStyling();
+
+            const btn = document.getElementById("btnInversion");
+            btn.addEventListener("click", () => {
+                invertColorsOfResults();
+            });
+        });
+        
         function addStyleBasedOfContent(element, content) {
             const convertedNumber = Number(content);
 
@@ -51,7 +62,7 @@
                 const element = mainResultElements[i];
                 console.log(element.textContent);
 
-                if(element.classList.contains("positiveResults")) {
+                if(element.classList.contains("positiveResult")) {
                     element.classList.remove("positiveResult");
                     element.classList.add("negativeResult");
                     continue;
@@ -71,21 +82,7 @@
         <h1 class="mainResult">1000</h1>
         <h1 class="mainResult">-1000</h1>
         <h1 class="mainResult">A name - not a number</h1>
-        <button onclick="invertColorsOfResults();">Invert colors</button>
+        <button id="btnInversion">Invert colors</button>
     </main>
-    <script>
-        // addResultStyling();
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     console.log("Document is loaded, y'all");
-        // });
-
-        // function aFunctionToRunLater() {
-        //     console.log("Document is loaded, y'all");
-        // }
-        document.addEventListener("DOMContentLoaded", () => {
-            console.log("Document is loaded, y'all");
-            addResultStyling();
-        });
-    </script>
 </body>
 </html>
