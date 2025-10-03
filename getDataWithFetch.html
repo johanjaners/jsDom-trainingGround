@@ -16,15 +16,10 @@
         }
         function createUserList(users) {
             const userList = document.createElement("div");
-
             for (let i = 0; i < users.length; i++) {
-                    const userHeading = createUserNameHeader(users[i]);
-                    const userImage = createUserImage(users[i]);
-
                     const userDiv = document.createElement("div");
-                    userDiv.appendChild(userHeading);
-                    userDiv.appendChild(userImage);
-
+                    userDiv.appendChild(createUserNameHeader(users[i]));
+                    userDiv.appendChild(createUserImage(users[i]));
                     userList.appendChild(userDiv);
                 }
             return userList;
