@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <title>Fetching data</title>
+    <style>
+        body { background-color: black; color: green;}
+    </style>
     <script>
         function getUsers(element) {
             fetch("https://randomuser.me/api/?gender=female&results=30")
@@ -15,8 +18,8 @@
         function createUserList(users) {
             const userList = document.createElement("div");
 
-            for (let i = 0; i < data.results.length; i++) {
-                    const user = data.results[i];
+            for (let i = 0; i < users.length; i++) {
+                    const user = users[i];
                     const userHeading = document.createElement("h2");
                     userHeading.textContent = `${user.name.title} ${user.name.first} ${user.name.last}`;
 
@@ -29,6 +32,7 @@
 
                     userList.appendChild(userDiv);
                 }
+            return userList;
         }
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -36,12 +40,7 @@
             getUsers(mainElement);
         });
     </script>
-    <style>
-        body {
-            background-color: black;
-            color: green;
-        }
-    </style>
+    
 </head>
 <body>
     <main>
