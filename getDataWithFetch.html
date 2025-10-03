@@ -14,15 +14,12 @@
                     element.appendChild(userList);
             });
         }
-
         function createUserList(users) {
             const userList = document.createElement("div");
 
             for (let i = 0; i < users.length; i++) {
-                    const user = users[i];
-                    const userHeading = createUserNameHeader(user);
-
-                    const userImage = createUserImage(user);
+                    const userHeading = createUserNameHeader(users[i]);
+                    const userImage = createUserImage(users[i]);
 
                     const userDiv = document.createElement("div");
                     userDiv.appendChild(userHeading);
@@ -32,29 +29,23 @@
                 }
             return userList;
         }
-
         function createUserNameHeader(user) {
             const userHeading = document.createElement("h2");
             userHeading.textContent = `${user.name.title} ${user.name.first} ${user.name.last}`;
             return userHeading;
         }
-
         function createUserImage(user) {
             const userImage = document.createElement("img");
             userImage.src = `${user.picture.thumbnail}`;
             return userImage;
         }
-
         document.addEventListener("DOMContentLoaded", () => {
             const mainElement = document.querySelector("main");
             getUsers(mainElement);
         });
     </script>
-    
 </head>
 <body>
-    <main>
-
-    </main>
+    <main></main>
 </body>
 </html>
