@@ -20,8 +20,7 @@
 
             for (let i = 0; i < users.length; i++) {
                     const user = users[i];
-                    const userHeading = document.createElement("h2");
-                    userHeading.textContent = `${user.name.title} ${user.name.first} ${user.name.last}`;
+                    const userHeading = createUserNameHeader(user);
 
                     const userImage = document.createElement("img");
                     userImage.src = `${user.picture.thumbnail}`;
@@ -33,6 +32,12 @@
                     userList.appendChild(userDiv);
                 }
             return userList;
+        }
+
+        function createUserNameHeader(user) {
+            const userHeading = document.createElement("h2");
+            userHeading.textContent = `${user.name.title} ${user.name.first} ${user.name.last}`;
+            return userHeading;
         }
 
         document.addEventListener("DOMContentLoaded", () => {
